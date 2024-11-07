@@ -1,0 +1,80 @@
+/* General styling for the vertical navigation */
+.vertical-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    /* Default width of navbar */
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    transition: width 0.3s ease;
+    z-index: 100;
+}
+
+/* Styling for each navbar item */
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    color: #fefae0;
+    text-decoration: none;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Styling for the icons */
+.nav-item i {
+    font-size: 1.8rem;
+    color: #fefae0;
+    background-color: transparent;
+    /* No background initially */
+    padding: 0.6rem;
+    border-radius: 50%;
+    /* Circle around the icon */
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for the nav text, initially hidden */
+.nav-text {
+    display: inline-block;
+    margin-left: 20px;
+    opacity: 0;
+    /* Text is hidden initially */
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, width 0.3s ease;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+}
+
+/* Hover effect for nav items (to reveal text) */
+.nav-item:hover .nav-text {
+    opacity: 1;
+    /* Text becomes visible */
+    width: max-content;
+    /* Expands to fit the content */
+    background-color: #6f1151;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Hover effect for icons */
+.nav-item:hover i {
+    background-color: #6f1151;
+    /* Background for icon when hovering */
+    transition: background-color 0.3s ease;
+}
+
+/* Active link styling */
+.active-link {
+    background-color: #f4a261;
+    color: white;
+}
